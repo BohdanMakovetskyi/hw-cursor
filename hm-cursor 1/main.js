@@ -19,7 +19,7 @@ console.log("Suma floor: " + sumaFloor);
 let sumaRound = Math.ceil(Math.round(suma) / 100) * 100;
 console.log("Suma round: " + sumaRound);
 // 6
-let sumaBoolean = (sumaFloor % 2) == 0;
+let sumaBoolean = (Math.floor(suma) % 2) == 0;
 console.log("Boolean suma: " + sumaBoolean);
 // 7
 let cashPerson = 500;
@@ -34,7 +34,8 @@ let sumaWihtDiscount = (suma - (suma * (randomDiscount / 100))).toFixed(2);
 console.log("Suma with discount: " + sumaWihtDiscount);
 let moneyDiscount = suma - sumaWihtDiscount;
 let lostMoney = (suma / 2) - moneyDiscount;
-console.log("Lost: " + Math.round(lostMoney));
+console.log("Lost: " + lostMoney.toFixed(2));
+lostMoney = lostMoney.toFixed(2);
 // Advanced
 let result = 
 `
