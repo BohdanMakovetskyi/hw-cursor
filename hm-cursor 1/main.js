@@ -34,8 +34,8 @@ let sumaWihtDiscount = (suma - (suma * (randomDiscount / 100))).toFixed(2);
 console.log("Suma with discount: " + sumaWihtDiscount);
 let moneyDiscount = suma - sumaWihtDiscount;
 let lostMoney = (suma / 2) - moneyDiscount;
-console.log("Lost: " + lostMoney.toFixed(2));
-lostMoney = lostMoney.toFixed(2);
+console.log("Lost: " + Math.floor(lostMoney));
+lostMoney = Math.floor(lostMoney);
 // Advanced
 let result = 
 `
