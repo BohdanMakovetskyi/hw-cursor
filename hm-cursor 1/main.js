@@ -16,7 +16,7 @@ console.log("Sum: " + sum);
 let sumFloor = Math.floor(pricePhone) + Math.floor(priceBook) + Math.floor(priceEholot);
 console.log("Sum floor: " + sumFloor);
 // 5
-let sumRound = Math.ceil(Math.round(sum) / 100) * 100;
+let sumRound = Math.round(Math.round(sum) / 100) * 100;
 console.log("Sum round: " + sumRound);
 // 6
 let sumBoolean = (Math.floor(sum) % 2) == 0;
@@ -48,7 +48,7 @@ let result =
     Здача: ${remainder};<br>
     Середня сума всіх товарів: ${meduimSum};<br>
     <br>
-    Рандомна знижка: ${randomDiscount};<br>
+    Рандомна знижка: ${randomDiscount}%;<br>
     Ціна зі знижкою: ${sumWihtDiscount};<br>
     Втрачена вигода: ${lostMoney};<br>
 `;
