@@ -10,30 +10,30 @@ console.log("Max: " + maxPrice);
 let minPrice = Math.min(priceBook, priceEholot, pricePhone);
 console.log("Min: " + minPrice);
 // 3
-let suma = pricePhone + priceEholot + priceBook;
-console.log("Suma: " + suma);
+let sum = pricePhone + priceEholot + priceBook;
+console.log("Sum: " + sum);
 // 4
-let sumaFloor = Math.floor(pricePhone) + Math.floor(priceBook) + Math.floor(priceEholot);
-console.log("Suma floor: " + sumaFloor);
+let sumFloor = Math.floor(pricePhone) + Math.floor(priceBook) + Math.floor(priceEholot);
+console.log("Sum floor: " + sumFloor);
 // 5
-let sumaRound = Math.ceil(Math.round(suma) / 100) * 100;
-console.log("Suma round: " + sumaRound);
+let sumRound = Math.ceil(Math.round(sum) / 100) * 100;
+console.log("Sum round: " + sumRound);
 // 6
-let sumaBoolean = (Math.floor(suma) % 2) == 0;
-console.log("Boolean suma: " + sumaBoolean);
+let sumBoolean = (Math.floor(sum) % 2) == 0;
+console.log("Boolean sum: " + sumBoolean);
 // 7
 let cashPerson = 500;
-let remainder = cashPerson - suma;
+let remainder = cashPerson - sum;
 console.log("Remainder: " + remainder);
 // 8
-let meduimSuma =  (suma / 3).toFixed(2);
-console.log("Medium suma: " + meduimSuma);
+let meduimSum =  (sum / 3).toFixed(2);
+console.log("Medium sum: " + meduimSum);
 // 9
 let randomDiscount = Math.round(Math.random() * 100);
-let sumaWihtDiscount = (suma - (suma * (randomDiscount / 100))).toFixed(2);
-console.log("Suma with discount: " + sumaWihtDiscount);
-let moneyDiscount = suma - sumaWihtDiscount;
-let lostMoney = (suma / 2) - moneyDiscount;
+let sumWihtDiscount = (sum - (sum * (randomDiscount / 100))).toFixed(2);
+console.log("Sum with discount: " + sumWihtDiscount);
+let moneyDiscount = sum - sumWihtDiscount;
+let lostMoney = (sum / 2) - moneyDiscount;
 console.log("Lost: " + Math.floor(lostMoney));
 lostMoney = Math.floor(lostMoney);
 // Advanced
@@ -41,15 +41,15 @@ let result =
 `
     Максимальна ціна: ${maxPrice};<br>
     Мінімальна ціна: ${minPrice};<br>
-    Cума всіх товарів: ${suma};<br>
-    Ціла сума округленна до min: ${sumaFloor};<br>
-    Сума округлена до сотень: ${sumaRound};<br>
-    Чи парна сума: ${sumaBoolean};<br>
+    Cума всіх товарів: ${sum};<br>
+    Ціла сума округленна до min: ${sumFloor};<br>
+    Сума округлена до сотень: ${sumRound};<br>
+    Чи парна сума: ${sumBoolean};<br>
     Здача: ${remainder};<br>
-    Середня сума всіх товарів: ${meduimSuma};<br>
+    Середня сума всіх товарів: ${meduimSum};<br>
     <br>
     Рандомна знижка: ${randomDiscount};<br>
-    Ціна зі знижкою: ${sumaWihtDiscount};<br>
+    Ціна зі знижкою: ${sumWihtDiscount};<br>
     Втрачена вигода: ${lostMoney};<br>
 `;
 
