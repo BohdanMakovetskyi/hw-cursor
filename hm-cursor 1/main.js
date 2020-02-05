@@ -13,10 +13,10 @@ console.log("Min: " + minPrice);
 let sum = pricePhone + priceEholot + priceBook;
 console.log("Sum: " + sum);
 // 4
-let sumFloor = Math.floor(pricePhone) + Math.floor(priceBook) + Math.floor(priceEholot);
+let sumFloor = Math.floor(sum);
 console.log("Sum floor: " + sumFloor);
 // 5
-let sumRound = Math.round(Math.round(sum) / 100) * 100;
+let sumRound = Math.ceil(Math.round(sum) / 100) * 100;
 console.log("Sum round: " + sumRound);
 // 6
 let sumBoolean = (Math.floor(sum) % 2) == 0;
