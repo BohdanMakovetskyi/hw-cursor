@@ -1,16 +1,16 @@
 
-const pricePhone = 123.965;
-const priceBook = 15.678;
-const priceEholot = 90.2345;
+const PRICE_IPHONE = 123.965;
+const PRICE_BOOK = 15.678;
+const PRICE_EHOLOT = 90.2345;
 
 // 1
-let maxPrice = Math.max(priceBook, priceEholot, pricePhone);
+let maxPrice = Math.max(PRICE_BOOK, PRICE_EHOLOT, PRICE_IPHONE);
 console.log("Max: " + maxPrice);
 // 2
-let minPrice = Math.min(priceBook, priceEholot, pricePhone);
+let minPrice = Math.min(PRICE_BOOK, PRICE_EHOLOT, PRICE_IPHONE);
 console.log("Min: " + minPrice);
 // 3
-let sum = pricePhone + priceEholot + priceBook;
+let sum = PRICE_IPHONE + PRICE_EHOLOT + PRICE_BOOK;
 console.log("Sum: " + sum);
 // 4
 let sumFloor = Math.floor(sum);
