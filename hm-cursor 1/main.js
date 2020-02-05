@@ -1,7 +1,7 @@
 
-let pricePhone = 123.965;
-let priceBook = 15.678;
-let priceEholot = 90.2345;
+const pricePhone = 123.965;
+const priceBook = 15.678;
+const priceEholot = 90.2345;
 
 // 1
 let maxPrice = Math.max(priceBook, priceEholot, pricePhone);
