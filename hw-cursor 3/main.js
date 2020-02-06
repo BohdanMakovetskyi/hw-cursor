@@ -58,7 +58,7 @@ function convertCurrency(str) {
     } else if (str[str.length - 3] === uahMoney[0] && str[str.length - 2] === uahMoney[1] && str[str.length - 1] === uahMoney[2]) {
         return parseInt(str) / 25;
     } else {
-        return 'is not a money!'
+        return 'there isnt "$" or "uah"!'
     }
 }
 
@@ -102,24 +102,20 @@ function isPolindrom(str) {
 // function 11 
 function deleteLattersWhoSeeMore(str) {
     str = str.toString();
+    str = str.toLowerCase();
+    let newStr = '';
     for(let i = 0; i < str.length; i++){
-        let char = '';
         let count = 0;
-        char = str[i];
         for(let j = 0; j < str.length; j++){
-            if(str[j] === char){
+            if(str[i] === str[j]){
                 count++;
             }
         }
-        if(count > 1){
-            for(let k = 0; k < str.length; k++){
-                if(str[k] === char){
-                    str = str.replace(char,'');
-                }
-            }
+        if(count < 2){
+            newStr += str[i];
         }
     }
-    return str;
+    return newStr;
 }
 
 let result = `
