@@ -38,7 +38,7 @@ function getMarksPairsStudentsWithThemes(studentsWithThemes) {
     let arrayWithMarksPairsStudentsWithThemes = [];
     
     for(let i = 0; i < Math.floor(students.length / 2); i++){
-        arrayWithMarksPairsStudentsWithThemes[i] = [studentsWithThemes[i][0],studentsWithThemes[i][1], Math.floor(((Math.random() * 5) + 1))];
+        arrayWithMarksPairsStudentsWithThemes[i] = [studentsWithThemes[i], Math.floor(((Math.random() * 5) + 1))].flat();
     }
     return arrayWithMarksPairsStudentsWithThemes;
 }
