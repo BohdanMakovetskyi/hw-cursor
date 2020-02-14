@@ -6,6 +6,7 @@ function getRandomArray(lenght, min, max) {
     }
     return array;
 }
+console.log('Task 1:');
 console.log(getRandomArray(8, 1, 100));
 
 // function 2
@@ -41,6 +42,7 @@ function getModa(...numbers) {
         return result[0];
     }
 }
+console.log('Task 2:');
 console.log(getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
 // function 3
@@ -48,6 +50,7 @@ function getAverage(...numbers) {
     const correctArray = numbers.filter(char => (parseFloat(char) - parseInt(char)) === 0);
     return (correctArray.reduce((accumulator,currentValue) => accumulator + currentValue, 0))/correctArray.length;
 }
+console.log('Task 3:');
 console.log(getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
 // function 4
@@ -60,12 +63,14 @@ function getMediana(...numbers){
         return sortCorrectArray[Math.floor(sortCorrectArray.length/2)];
     }
 }
+console.log('Task 4:');
 console.log(getMediana(1, 2, 3, 4));
 
 // function 5
 function filterNumbers(...numbers) {
     return numbers.filter(el => ((parseFloat(el) - parseInt(el)) === 0) && el % 2);
 }
+console.log('Task 5:');
 console.log(filterNumbers(1,2,3,4,5,6));
 
 // function 6
@@ -78,6 +83,7 @@ function countPositiveNumbers(...numbers) {
        return sum;
     }, 0);
 }
+console.log('Task 6:');
 console.log(countPositiveNumbers(1, -2, 3, -4, -5, 6));
 
 // function 7
@@ -85,6 +91,7 @@ function getDividedByFive(...numbers) {
     const correctArray = numbers.filter(char => (parseFloat(char) - parseInt(char)) === 0);
     return correctArray.filter(el => el % 5 === 0);
 }
+console.log('Task 7:');
 console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
 // function 8
@@ -98,6 +105,7 @@ function replaceBadWords(string) {
     }
     return arrayWords.join(' ');
 }
+console.log('Task 8:');
 console.log(replaceBadWords('Are you fucking kidding?'));
 
 // function 9
@@ -111,10 +119,12 @@ function divideByThree(word) {
             temp[j] = word.slice(i,i+3);
             c -= 3;
             j++;
+            i += 3;
         }
         return temp;
     }
 }
+console.log('Task 9:');
 console.log(divideByThree('liven'));
 
 // function 10
