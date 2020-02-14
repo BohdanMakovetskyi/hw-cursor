@@ -128,27 +128,43 @@ console.log('Task 9:');
 console.log(divideByThree('liven'));
 
 // function 10
-// function factorial(number) {
-//     if (number === 1) return 1;
-//     else return number * factorial(number - 1);
-// }
-// function generateCombinations(word) {
-//     if (word.length > 10) {
-//         return 'Function dont work!';
-//     } else {
-//         const fact = factorial(word.length);
-//         let result = [];
-//         let arrayChar = word.split('');
-//         for(let i = 0; i < fact; i++){
-//             let wordResult = '';
-//             for(let j = 0; j < word.length; j++){
-//                  
-//             }
-//             result[i] = wordResult;
-//         }
-//     }
-// }
-// console.log(generateCombinations('mad'));
+function make(arr, el) {
+    let i, i_m, item;
+    let len = arr.length;
+    let res = [];
+
+    for(i = len; i >= 0; i--) {
+        res.push(
+            ([]).concat(
+                arr.slice(0, i),
+                [el],
+                arr.slice(i, i_m)
+            )
+        );
+    }
+    return res;
+}
+function generateCombinations(arr) {
+    let prev, curr, el, i;
+    let len = arr.length;
+
+    curr = [[arr[0]]];
+
+    for(i = 1; i < len; i++) {
+        el = arr[i];
+        prev = curr;
+        curr = [];
+
+        prev.forEach(function(item) {
+            curr = curr.concat(
+                make(item, el)
+            );
+        });
+    }
+    return curr;
+}
+console.log('Take 10:');
+console.log(generateCombinations('wadding'));
 
 
 
