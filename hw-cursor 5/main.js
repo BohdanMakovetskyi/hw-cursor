@@ -132,7 +132,7 @@ console.log(divideByThree('liven'));
 //         for(let i = 0; i < fact; i++){
 //             let wordResult = '';
 //             for(let j = 0; j < word.length; j++){
-//
+//                  
 //             }
 //             result[i] = wordResult;
 //         }
