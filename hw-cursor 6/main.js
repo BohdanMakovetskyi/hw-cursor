@@ -86,15 +86,15 @@ console.log(getStudentsNames(students));
 // function 5
 function getBestStudent(students) {
     let result = [];
-    let max = 0;
+    let max = 0.0;
     for(let i = 0; i < students.length; i++){
-        if(getAverageMark(students[i]) > max){
-            max = getAverageMark(students[i]);
-        }
         result.push(getStudentInfo(students[i]));
+        if(parseFloat(result[i].averageMark) > max) {
+            max = parseFloat(result[i].averageMark);
+        }
     }
     for(let i = 0; i < result.length; i++){
-        if(result[i].averageMark === max){
+        if(parseFloat(result[i].averageMark) === max){
             return result[i].name;
         }
     }
@@ -108,9 +108,9 @@ function calculateWordLetters(str) {
     let newStr = str.toLowerCase();
     for (let i = 0; i < newStr.length; i++){
         if(!Object.keys(result).includes(newStr[i])){
-            result[newStr[i]] = 1;
+            result[`"${newStr[i]}"`] = 1;
         }
-        else result[newStr[i]]+=1;
+        else result[`"${newStr[i]}"`]+=1;
     }
     return result;
 }
