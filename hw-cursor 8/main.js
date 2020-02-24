@@ -72,8 +72,7 @@ class BudgetStudent extends Student {
     }
 }
 
-let maxim = new BudgetStudent('Franko', 2, 'Maxim Ozumok');
+let maxim = new BudgetStudent('Franko', 3, 'Maxim Farestyh');
 maxim.getInfo;
 maxim.getMarks;
-maxim.setMarks = 1;
 maxim.getScholarship();
