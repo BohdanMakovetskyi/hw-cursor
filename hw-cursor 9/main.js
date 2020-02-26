@@ -43,19 +43,15 @@ function generateBlocks() {
     `;
     let square = document.querySelectorAll('.square');
     square.forEach(el => {
-        let classForSquare = Math.floor(Math.random() * (classes.length - 1) + 1);
-        el.classList.add(classes[classForSquare]);
+        let classForSquare = Math.floor(Math.random() * classes.length);
+        el.className = 'square ' + classes[classForSquare];
     });
 }
 generateBlocks();
 
 function generateBlocksInterval() {
-    let square = document.querySelectorAll('.square');
     setInterval(() => {
-        square.forEach(el => {
-            let classForSquare = Math.floor(Math.random() * (classes.length - 1) + 1);
-            el.className = 'square ' + classes[classForSquare];
-        });
+        generateBlocks();
     }, 1000);
 }
 generateBlocksInterval();
