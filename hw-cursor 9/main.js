@@ -1,51 +1,26 @@
-const classes = ['red', 'yellow', 'black', 'pink', 'green', 'white', 'grey', 'orange', 'red_', 'yellow_', 'black_', 'green_', 'orange_'];
-
-function generateBlocks() {
-    let box = document.querySelector('body');
-    box.innerHTML = `
-        <div class = 'box'>
-            <div class="row">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-            </div>
-            <div class="row">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-            </div>
-            <div class="row">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-            </div>
-            <div class="row">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-            </div>
-            <div class="row">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-            </div>
-        </div>
-    `;
+function generateRandomColor() {
+    return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+}
+function createDiv() {
+    const box = document.querySelector('.box');
+    const div = document.createElement('div');
+    div.className = 'square';
+    div.style.backgroundColor = generateRandomColor();
+    box.append(div);
+    setTimeout(() => {
+        div.remove();
+    },950);
+}
+function deleteDiv() {
     let square = document.querySelectorAll('.square');
-    square.forEach(el => {
-        let classForSquare = Math.floor(Math.random() * classes.length);
-        el.className = 'square ' + classes[classForSquare];
-    });
+    for (let i = 0; i < square.length; i++){
+        square[i].remove();
+    }
+}
+function generateBlocks() {
+    for(let i = 0; i < 25; i++){
+        createDiv();
+    }
 }
 generateBlocks();
 

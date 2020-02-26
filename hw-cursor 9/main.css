@@ -1,54 +1,10 @@
 .box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin: -125px 0 0 -125px;
-}
-.row {
     display: flex;
+    flex-wrap: wrap;
     width: 250px;
 }
 .square {
     display: block;
     height: 50px;
     width: 50px;
-}
-.red {
-    background: #af0200;
-}
-.yellow {
-    background: #9a9506;
-}
-.black {
-    background: #000;
-}
-.pink {
-    background: #cb0873;
-}
-.green {
-    background: #7af007;
-}
-.white {
-    background: #dedede;
-}
-.gray {
-    background: #565656;
-}
-.orange {
-    background: #f75010;
-}
-.red_ {
-    background: #f3180f;
-}
-.yellow_ {
-    background: #f2e857;
-}
-.black_ {
-    background: #1e1e1e;
-}
-.green_ {
-    background: #79f05e;
-}
-.orange_ {
-    background: #f7940d;
 }
