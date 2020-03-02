@@ -108,9 +108,9 @@ function calculateWordLetters(str) {
     let newStr = str.toLowerCase();
     for (let i = 0; i < newStr.length; i++){
         if(!Object.keys(result).includes(newStr[i])){
-            result[`"${newStr[i]}"`] = 1;
+            result[newStr[i]] = 1;
         }
-        else result[`"${newStr[i]}"`]+=1;
+        else result[newStr[i]]+=1;
     }
     return result;
 }
