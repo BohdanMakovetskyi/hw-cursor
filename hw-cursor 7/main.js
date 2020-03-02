@@ -20,16 +20,16 @@ function getTotalTaxes() {
 console.log('Task 3:');
 console.log(getTotalTaxes.call(litva));
 
-function getMySalary(country) {
+function getMySalary() {
     let result = {};
     let randomSalary = Math.floor(Math.random() * (2000 - 1500) + 1500);
     result.salary = randomSalary;
-    result.taxes = parseFloat((country.tax * randomSalary).toFixed(2));
+    result.taxes = parseFloat((this.tax * randomSalary).toFixed(2));
     result.profit = parseFloat((result.salary - result.taxes).toFixed(2));
     return console.log(result);
 }
 console.log('Task 4:');
 let timerId = setTimeout(function tick() {
-    getMySalary(ukraine);
+    getMySalary.call(ukraine);
     timerId = setTimeout(tick, 2000);
 }, 2000);
