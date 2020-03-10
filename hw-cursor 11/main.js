@@ -15,14 +15,12 @@ function getRandomChinese(length) {
                 resolve(str);
             } else {
                 str += getSymbol();
-                timer = setTimeout(tick, 50);
+                timer = setTimeout(tick, 1000);
                 counter--;
             }
-        }, 50);
+        }, 1000);
     });
-    promise.then((str) => {
-        return console.log(str);
-    });
+    return promise;
 }
-getRandomChinese(5);
+getRandomChinese(4).then((str) => {console.log(str)});
 
