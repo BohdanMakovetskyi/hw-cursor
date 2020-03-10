@@ -15,10 +15,10 @@ function getRandomChinese(length) {
                 resolve(str);
             } else {
                 str += getSymbol();
-                timer = setTimeout(tick, 1000);
+                timer = setTimeout(tick, 50);
                 counter--;
             }
-        }, 1000);
+        }, 50);
     });
     return promise;
 }
