@@ -1,69 +1,80 @@
 const BASE = 'https://swapi.co/api/';
+const config = {
+    params: {
+        page: numberPage = 1
+    }
+};
 
 async function getPersons() {
     try {
         const film = document.querySelector('.inputFilm').value;
-        if(parseInt(film)>0 && parseInt(film)<=7){
+        if(parseInt(film) > 0 && parseInt(film) <= 7) {
             const response = await axios.get(BASE + `films/${film}/`);
-            const api = response.data.characters;
-            let container = document.querySelector('.persons');
-            container.innerHTML = '';
-            api.forEach(url => {
-                async function f() {
-                    let person = await axios.get(url);
-                    let personDiv = document.createElement('div');
-                    personDiv.innerHTML = `
-                        <img src="./img/stormtrooper.png">
-                        <h4>${person.data.name}3</h4>
-                        <h5>${person.data.birth_year}</h5>
-                        <h5>${person.data.gender}</h5>
-                   `;
-                    personDiv.classList.add('person');
-                    container.append(personDiv);
-                }
-                f();
-            });
+            return response.data.characters;
         } else {
             alert('Введіть номер фільму;)');
         }
     } catch (e) {
         console.log(e);
     }
-
 }
 
-async function getPlanets(api = `${BASE}planets/?page=1`) {
+function drawPerson(personApi) {
+    let container = document.querySelector('.persons');
+    container.innerHTML = '';
+    personApi.forEach(async url => {
+        let person = await axios.get(url);
+        let personDiv = document.createElement('div');
+        personDiv.innerHTML = `
+                <img src="./img/stormtrooper.png">
+                <h4>${person.data.name}3</h4>
+                <h5>${person.data.birth_year}</h5>
+                <h5>${person.data.gender}</h5>
+           `;
+        personDiv.classList.add('person');
+        container.append(personDiv);
+    });
+}
+
+async function getPlanets(config) {
     try {
-        const response = await axios.get(api);
+        const response = await axios.get(BASE + 'planets/', config);
         let planets = response.data.results;
         let container = document.querySelector('.planets');
         container.innerHTML = '';
-        for (let i = 0; i < planets.length; i++){
-            let planet = document.createElement('h3');
-            planet.innerHTML = `
-                ${i+1}: ${planets[i].name}
+        let i = 1;
+        planets.forEach(planet => {
+            let planetElement = document.createElement('h3');
+            planetElement.innerHTML = `
+                ${i}: ${planet.name}
             `;
-            container.append(planet);
-        }
+            i++;
+            container.append(planetElement);
+        });
     } catch (e) {
         console.log(e);
     }
 }
-getPlanets();
+getPlanets(config).then();
 
-let i = 1;
 document.querySelector('.next').addEventListener('click', function () {
-    i++;
-    if(i === 8){
-        i = 7;
+    config.params.page++;
+    if(config.params.page <= 7) {
+        getPlanets(config).then();
+    } else {
+        config.params.page = 7;
+        getPlanets(config).then();
     }
-    getPlanets(BASE + `planets/?page=${i}`);
-    document.querySelector('.back').addEventListener('click', function () {
-        i--;
-        if(i === 0) {
-            i = 1;
-        }
-        getPlanets(BASE + `planets/?page=${i}`);
-    });
 });
-document.querySelector('.info').addEventListener('click', getPersons);
+document.querySelector('.back').addEventListener('click', function () {
+    config.params.page--;
+    if(config.params.page >= 1) {
+        getPlanets(config).then();
+    } else {
+        config.params.page = 1;
+        getPlanets(config).then();
+    }
+});
+document.querySelector('.info').addEventListener('click', () => {
+    getPersons().then(drawPerson);
+});
