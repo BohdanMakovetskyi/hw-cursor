@@ -1,0 +1,19 @@
+body {
+    background: rgba(0, 0, 0, 0.72);
+}
+.persons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.person {
+    flex-basis: 200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(86, 86, 86, 0.76);
+    text-align: center;
+    padding: 0 5px;
+    cursor: pointer;
+}
