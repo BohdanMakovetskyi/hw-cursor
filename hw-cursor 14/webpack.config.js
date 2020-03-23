@@ -1,15 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const PATHS = {
-    src: path.join(__dirname, 'src'),
-    dist: path.join(__dirname, 'dist')
-};
 
 module.exports = {
     mode: "development",
-    entry: ["babel-polyfill", PATHS.src + '/index.js'],
+    entry: ["babel-polyfill",'./src/index.js'],
     output: {
-        path: PATHS.dist,
+        path: path.join(__dirname,'dist'),
         filename: '[name].js'
     },
     devServer: {
@@ -18,9 +14,15 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "babel-loader"
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
             },
             {
                 test: /\.css$/,
@@ -33,24 +35,9 @@ module.exports = {
                     {
                         loader: 'image-webpack-loader',
                         options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 65
-                            },
-                            optipng: {
-                                enabled: false,
-                            },
-                            pngquant: {
-                                quality: [0.65, 0.90],
-                                speed: 4
-                            },
-                            gifsicle: {
-                                interlaced: false,
-                            },
-                            webp: {
-                                quality: 75
-                            }
-                        }
+                            bypassOnDebug: true,
+                            disable: true,
+                        },
                     },
                 ],
             }

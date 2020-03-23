@@ -4263,7 +4263,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar students = [{\n  name: \"
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"3dd764e3e79978778f6e37f6410ae9b6.png\");\n\n//# sourceURL=webpack:///./src/img/stormtrooper.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"9233b673c8a24bb0f59ead02bb48cb81.png\");\n\n//# sourceURL=webpack:///./src/img/stormtrooper.png?");
 
 /***/ }),
 
@@ -4309,7 +4309,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _img
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! babel-polyfill */\"./node_modules/babel-polyfill/lib/index.js\");\nmodule.exports = __webpack_require__(/*! E:\\hw-cursor\\hw-cursor 14\\src/index.js */\"./src/index.js\");\n\n\n//# sourceURL=webpack:///multi_babel-polyfill_./src/index.js?");
+eval("__webpack_require__(/*! babel-polyfill */\"./node_modules/babel-polyfill/lib/index.js\");\nmodule.exports = __webpack_require__(/*! ./src/index.js */\"./src/index.js\");\n\n\n//# sourceURL=webpack:///multi_babel-polyfill_./src/index.js?");
 
 /***/ })
 
