@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/static/css/main.3a498260.chunk.css",
+    "main.js": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/static/js/main.a7d50e37.chunk.js",
+    "main.js.map": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/static/js/main.a7d50e37.chunk.js.map",
+    "runtime-main.js": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/static/js/runtime-main.0acdd643.js",
+    "runtime-main.js.map": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/static/js/runtime-main.0acdd643.js.map",
+    "static/js/2.3dd64d21.chunk.js": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/static/js/2.3dd64d21.chunk.js",
+    "static/js/2.3dd64d21.chunk.js.map": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/static/js/2.3dd64d21.chunk.js.map",
+    "index.html": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/index.html",
+    "precache-manifest.10a773f7831795cef1b3a363389e725b.js": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/precache-manifest.10a773f7831795cef1b3a363389e725b.js",
+    "service-worker.js": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/service-worker.js",
+    "static/css/main.3a498260.chunk.css.map": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/static/css/main.3a498260.chunk.css.map",
+    "static/js/2.3dd64d21.chunk.js.LICENSE.txt": "/BohdanMakovetskyi/hw-cursor/tree/master/hw-cursor_15/my-app/static/js/2.3dd64d21.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0acdd643.js",
+    "static/js/2.3dd64d21.chunk.js",
+    "static/css/main.3a498260.chunk.css",
+    "static/js/main.a7d50e37.chunk.js"
+  ]
+}
