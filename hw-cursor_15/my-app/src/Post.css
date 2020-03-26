@@ -1,0 +1,70 @@
+.box {
+  margin: auto;
+  height: 400px;
+  width: 600px;
+  display: block;
+  background: rgb(36, 34, 34);
+  border: 1px solid #848881;
+}
+.img {
+  height: 300px;
+  width: 500px;
+  border-radius: 20px;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.img_logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.name {
+  display: flex;
+}
+.header {
+  display: flex;
+}
+.info {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.white {
+  color: antiquewhite;
+}
+.white__ {
+  color: rgb(177, 177, 155);
+}
+.ml5 {
+  margin-left: 5px;
+}
+.down {
+  transform: rotate(90deg);
+  margin-left: 23%;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70px;
+}
+.cont {
+  display: flex;
+}
+.far {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-right: 5px;
+  color: aliceblue;
+  cursor: pointer;
+}
+.fas {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-right: 5px;
+  color: aliceblue;
+  cursor: pointer;
+}
+.fa-upload {
+  margin-right: 50px;
+}
